@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Timemachine</title>
+		<link rel="stylesheet" href="sp://import/css/adam.css" />
+		<link rel="stylesheet" href="sp://import/css/api.css" />
+		
+		<link rel="stylesheet" href="css/nouislider.css" />
+		<link rel="stylesheet" href="scripts/api/toolbar.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/table.css" />
+		<script src="js/jquery-1.7.2.min.js" language="javascript"></script>
+		<script src="js/jquery.nouislider.js" language="javascript"></script>
+		<script type="text/javascript">
+			
+			function share(uri) {
+				$("#share").fadeIn();
+				$("#share").css({"-webkit-transform":"scale(1.0)"});
+				
+			}
+			function ldrag(e) {
+				try {
+					e.preventDefault();
+					e.dataTransfer.dropEffect = 'none';
+					e.returnValue = false;
+				} catch (e) {
+					console.log(e.stack);
+				}
+			}
+			function slaw () {
+				if(document.getElementById("info").style.display == "none") {
+					document.getElementById("info").style.display = "block";
+					localStorage.setItem("hideInfo", "false");
+					document.getElementById("slaw").innerHTML = "Hide info";
+				} else {
+					document.getElementById("info").style.display = "none";
+					localStorage.setItem("hideInfo", "true");
+					document.getElementById("slaw").innerHTML = "Show info";
+				}
+			}
+			
+			function init() {
+				try {
+					if(localStorage.getItem("hideInfo") == "true") {
+						document.getElementById("info").style.display = "none";
+						document.getElementById("slaw").innerHTML = "Show info";
+					} else {
+						document.getElementById("info").style.display = "block";
+						document.getElementById("slaw").innerHTML = "Hide info";
+					}
+				} catch (e) {
+					document.getElementById("info").style.display = "block";
+				}
+				document.getElementById("query").addEventListener("dragover", ldrag, false);
+			}
+			
+		</script>
+	</head>
+	<body  onload="sp = getSpotifyApi(1); script = sp.require('script'); script.init(); init();">
+		<header style="display: none">
+			<a style="position:absolute;right:10px; top: 13px;" href="http://www.facebook.com/pages/Time-Machine/239954689447588?ref=ts"><img  style="float:left" src="img/ic_facebook.png" /></a>
+			<center>	<img class="nodrag" src="img/logo.png" /> </center>
+		</header>
+		<nav style="height:32px; width:100%;overflow: hidden">
+			<span class="display" style="float: left" id="startyear">1950</span>
+							<div id="slider" style="float:left; text-align:center">
+								<!--<input class="range" style="width:320px" id="timeslider" min="1920" max="2012" type="range"  />-->
+								<div id="timeslider">
+								</div>
+								<script>
+									
+								</script>
+					
+
+							</div>
+							<span class="display" style="float: left" id="endyear">2012</span>
+							<span style="float: right">
+								<input class="input" type="find" style="width:320" data-template="Search for track/artist/album between ${start} - ${end}" placeholder="Search for track/artist/album between ${start} - ${end}" style="width:330px" id="query" list="powers"/>
+							</span>	
+		</nav><br />
+		<div  class="section" id="section_overview">
+	<!--	<div id="story" >
+				<span style="font-size: 13px">Time Machine is an easy-to use shell for Spotify’s own year search functionality! Playlists are based on standard 							search queries. For example,
+							<a id="example" href="spotify:search:2001-2002">spotify:search:2001-2002</a>. 
+Tracks are chosen according to Spotify’s standard search results. You can also search within your search using the input field below the Time Machine header logo.</span>
+<center><a href="#" onclick="slaw()" id="slaw">Hide info</a></center>
+			</div> -->
+			<table  width="100%" height="128" cellspacing="5" class="">
+				<tr>
+					<td  valign="top" width="120" id="c_player">
+					</td>
+					<td valign="top">
+						<a href="#" id="label_year">2001</a>
+						<div style="height: 32px" class="toolbar">
+							<button class="add-playlist button icon" onclick="subscribe()"><span class="plus"></span>Add as playlist</button>
+						</div>
+						<div valign="top" id="annotation">
+							 
+						</div>
+					</td>
+					<td width="35%" valign="top" id="relations">
+						<h3>Notable artists</h3>
+						 
+							
+						<ul id="artists"></ul>
+				
+				
+						<ul id="artists_text"></ul>
+				
+				
+					</td>
+				</tr>
+			</table>
+			<divider>
+				<h2>Popular compilations</h2>
+			</divider>
+			<div style="padding: 13px; height: 128px;">
+				<ul id="compilations">
+				</ul>
+			</div><br />
+			<divider>
+				<h2>Tracks</h2>
+			</divider>
+			<!--<div id="fb-connect">
+				<input type="checkbox" value="true" name="fb" id="fb" /><label>I understand that when I log into my TimeMachine with Facebook, TimeMachine will be able to associate information about my Spotify use, such as library, and listening history, with my Facebook account</label>
+			</div>-->
+			
+			<div id="c_playlist">
+				
+			</div>
+			
+			<div id="flow">
+			</div>
+			
+			<div id="find">
+				
+				
+				<datalist id="powers">
+					 <option value="1950">
+					 <option value="2000">
+					 <option value="2012">
+				</datalist>
+
+			</div>
+		
+
+		</div>
+		
+		<div id="connLost" style="display: none; z-index:555" class="fade">
+			
+			<div class="msg">You're offline. This app does not work in offline mode</div>
+		</div>
+		<div id="share_template" style="display: none">
+			<textarea id="share_text" class="textarea" style="width:90%;"></textarea>
+			<button onclick="share_now()" class="sp-button sp-primary">Share</button>
+		</div>
+		<footer >
+			<center>
+				<table width="440">
+					<tr>
+						
+						<td>
+							<div id="miniplayer"></div></td><td><span id="miniplayer"></span><div >By <a href="spotify:user:drsounds">Alexander Forselius</a> Also an <a href="spotify:artist:2FOROU2Fdxew72QmueWSUy">artist on Spotify</a></div>
+						</td>
+						
+					</tr>
+				</table>
+			</center>
+		</footer>
+		
+	</body>
+</html>

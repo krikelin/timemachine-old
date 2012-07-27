@@ -1,0 +1,13 @@
+.toolbar {
+
+	width: 100%;
+	box-sizing: border-box;
+	padding:5px;
+	border-radius:8px;
+	border-left:1px solid #1c1c1c;
+	border-top:1px solid #1c1c1c;
+	border-bottom:1px solid #434343;
+	height: 42px !important;
+	border-right:1px solid #434343;
+	background: #202020;/*-webkit-linear-gradient(-90deg, #222222, #222222);*/
+}

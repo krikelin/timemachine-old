@@ -1,0 +1,607 @@
+.display{
+	background-color:#111111;
+	/*box-shadow: inset 0px -1px 5px #FFFFFF, inset 0px 0px 13px #000000, inset 0px 35px 110px #565656,inset 0px -15px 13px #555555, inset 0px 1px 1px #000000;*/
+	padding:5px;
+	border-radius:4px;
+	margin-top:2px;
+	font-size:12px;
+	color:#88ff88;
+
+	top:60px;
+	left:45%;
+}
+.textarea {
+	border: 1px solid #888888;
+}
+#share > *:first-child {
+	
+	margin-top: 35px;
+}
+#share > * {
+	margin: 8px;
+}
+#share {
+	z-index:12;
+	position:absolute;
+	display: none;
+	
+	
+	-webkit-transition: all .2s ease-in-out;
+	left:20px;
+	top:210px;
+	width: 358px;
+	height: 196px;
+	background-image: url("../img/balloon.png");
+}
+.nodrag {
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+header a {
+	color: #FFFFFF;
+}
+header div {
+	color: #aaffaa;
+}
+
+#error span {
+	width:100%;
+	top: 50%;
+	position:absolute;
+}
+#error {
+	
+	left:0px;
+	top:0px;
+	width:100%;
+	height: 100%;
+	
+	z-index: 0;
+	position:absolute;
+	font-size:50px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #444444;
+
+	background-color:#222222;
+	color:#ffffff;
+	text-shadow: 0px 1px 1px #555555;
+}/*
+#msg {
+	left:120px;
+	top:40%;
+	position:absolute;
+	font-size:50px;
+	font-weight: bold;
+
+	background-color:#66666;
+	color:#222222;
+	text-shadow: 0px 1px 1px #555555;
+	
+}*/
+#alert {
+	left:20%;
+	top:20%;
+	width:320px;
+	height:120px;
+	position:absolute;
+	box-shadow: 0px 1px 12px #000000;
+	border: 1px solid #aaaaaa;
+	background-color: #333333;
+	display: none;
+}
+	
+.sp-image {
+/*	-webkit-box-reflect:below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));*/
+	border-radius:1px;
+	
+	}
+#radio_playlist {
+	list-style-type: none;
+	position: absolute;
+	left:60%;
+	top:120px;
+}
+#radio_playlist li {
+	float: left;
+
+}
+#l_track {	
+	display: none;
+	position: absolute;
+	left: 20%;
+	top: 140px;
+}
+#r_track {
+	display: none;
+	position: absolute;
+	left: 80%;
+	top: 140px;
+}
+#track {
+	position: absolute;
+	left: 35%;
+	top: 120px;
+}	
+.range2 {
+    border-radius: 11px;
+    background-image:  -webkit-linear-gradient(90deg, rgb(61,61, 61) 30%, rgb(21, 21, 21) 90%);
+	
+	width: 320px;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #777777;
+    height:12px;
+}
+.range {
+    border-radius: 11px;
+    background-image:  -webkit-linear-gradient(90deg, rgb(61,61, 61) 30%, rgb(21, 21, 21) 90%);
+	
+
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #777777;
+    height:12px;}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    border-radius: 128px;
+    background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(161,161,161)),
+		color-stop(0.58, rgb(232,232,232))
+	);
+	box-shadow: 0px 1px 2px #111111;
+    height:12px;
+    width:12px;
+}
+strong{
+	font-family:"Arial Black";
+	color:#ffffff;
+	text-shadow: 0px -1px 0px #000000;
+}
+.next{
+	width:120px;
+	height:120px;
+	border-radius:320px;
+	border:0px;
+	font-size:100px;
+	text-align:center;
+	
+	background-color:#ffffff;
+	opacity:0.5;
+	float:right;
+}
+.loading_indicator{
+	-webkit-mask-image: url("../img/loading_indicator.png");
+	background-color: #000;
+	-webkit-animation-name: spinnerRotate;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	width:32px;
+	height:32px;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes spinnerRotate {
+	from {
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+	}
+}/*
+#flow{
+	border: 1px solid #222222;
+	background: url("../img/lumni.png");
+	padding:20px;
+
+	
+}*/
+body{
+	min-height: 100%;
+	min-width: 800px;
+	background-position: fixed;
+	/*box-shadow:inset 0px 215px 1125px #000000, inset 0px -120px 1125px #aaaaaa;*/
+/*	background-image: url("../img/bg.png"); */
+	
+}
+.box {
+	
+	margin-left:20%;
+	margin-right:10px;
+	width:640px;
+	
+}
+.year{
+	font-size:11px;
+	font-family:"Tahoma";
+	color:#88ffff;
+}
+#slider, #find, #save{
+	text-align:center;
+}
+
+#flow, #history{
+/*	box-shadow:inset 0px 1px 3px #111111;*/
+	
+	
+}
+@-webkit-keyframes spinnerRotate {
+	from {
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+	}
+}
+.loader { 		
+	
+	width: 30px;
+	height: 30px;
+	position: relative;
+	margin-left: auto;
+	
+	margin-right: auto;
+	background-image: url("../img/loader.png");
+	-webkit-animation: throbber 2s infinite;
+	-webkit-animation-name: spinnerRotate;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+}	
+.fade {
+	text-align:center;
+}
+.fade .msg {
+	margin-left:auto;
+	margin-right: auto;
+	margin-top:35%;
+}
+.fade {
+	position: fixed !important;
+
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	line-height:50px;
+background: #333333;
+
+
+	font-size:50px;
+	color :#FFFFFF;
+	text-shadow: 0px 1px 1px #000000;
+}
+	
+.sp-list, .sp-list div {
+	height:  auto;
+	max-height: none;
+	position:relative;
+}
+#current_track, #current_track * {
+	
+}
+#flow{
+	padding-top:12px;
+	position: absolute;
+	position:relative;
+	
+}
+
+#cyear{
+	opacity:0.4;
+	text-align:center;
+	
+}
+.sectionw{
+	width:100%;
+	text-indent:12px;
+	background-image: url("../img/section.png");
+	height:23px;
+	font-family: "Helvetica";
+	font-weight: bold;
+	color:#FFFFFF;
+	text-shadow:0px -1px 1px #333333;
+}
+#story, #fb-connect {
+	position:relative;
+	font-family: "Helvetica", "Lucida Grande", "Georgia";
+	
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px;
+	
+	font-size:18px;
+	line-height: 18px;
+}
+
+#bigyear{
+}
+.label {
+	font-size:18px;
+	color: #FFFFFF;
+}
+.lightbox{
+	border-radius:12px;
+	background-color:#373737;
+	padding:20px;
+	margin:30px;
+}
+#year, #chosen_year{
+	
+	width:320px;
+	opacity:0.8;
+	color:#000000;
+	font-weight:bold;
+	text-shadow: 0px -1px 1px #ffffff;
+}
+footer{
+	position: relative;
+	height:128px;
+	top:20px;
+}
+#history{
+	height:128px;
+	background-color:#333333;
+}
+section{
+	position: relative;
+}
+.buttonx{
+	font-size:12px;
+	height:28px;
+	padding-left:32px;
+	padding-right:32px;
+	border: 1px solid #333333;
+	background-color:#AAAAAA;
+	border-radius:38px;
+	box-shadow:0px 1px 3px #000000, inset 0px 1px 1px #eeeeee;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(191,191,191)),
+		color-stop(0.95, rgb(230,230,230))
+	);
+	text-shadow:0px -1px 1px #FFFFFF;
+	
+}
+.buttonx:active{
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(112,112,112)),
+		color-stop(0.95, rgb(74,74,74))
+	);
+	color:#FFFFFF;
+	text-shadow:0px -1px 1px #000000;
+}
+footer {
+bottom:0px;
+height: 60px;
+}
+header h1 {
+	font-size:25px;
+}
+nav > * {
+	margin:1px;
+	
+}
+#artists, #compilations {
+	width: 100%;
+	height: 64px;
+}
+#artists_text li:after {
+	content: " \25CF ";
+}
+#artists li {
+	float: left;
+}
+#compilations li {
+}
+divider, h2 {
+	display: block;
+}
+nav #slider {
+	margin-left: 14px;
+	margin-right: 10px;
+	margin-top:6px;
+}
+.thumb, .fill, .end {
+	position: relative;
+}
+
+
+.btn-tool {
+	top: 0px;
+	
+	background: transparent;
+	color: #aaaaaa;
+	font-size:14px;
+	font-weight: thin;
+	font-family: "Arial Narrow";
+	height:100%;
+	-webkit-border-image: url("sp://timemachine/img/btn_border.png") 0 2 0 0;
+}
+
+nav { 	
+	
+	background: url("../img/toolhead.png");
+	height:32px;
+	left: 0px;
+	position:relative;
+	
+	z-index:6;
+}
+header span{	
+	position:relative;
+	font-size:25px;
+	top:20px;
+}
+
+header{
+	background: -webkit-linear-gradient(90deg, #aC4810, #EC5810);
+	background: -webkit-linear-gradient(90deg, #58B700, #7AB800); 
+	background: url("../img/header.png");
+	/*box-shadow:0px 6px 6px #333333;*/
+	color: #FFFFFF;
+	height: 59px;
+	
+	text-align: middle;
+	position: relative;
+
+	
+}
+
+
+/* The slider itself. Set a height, background, border, width, etc. */
+#timeslider			{
+	 border-radius: 11px;
+    background-image:  -webkit-linear-gradient(90deg, rgb(61,61, 61) 30%, rgb(21, 21, 21) 90%);
+	
+	width: 140px;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #777777;
+    height:12px;
+}
+
+/* This class targets both handles. You only need to set height and width. */
+.noUi_handle    		{
+	height:				8px;
+	
+	width:				8px;
+}
+
+/* The bar between the two handles. Only a height is critical. */
+.noUi_midBar			{
+	height:				11px;
+}
+
+/* Feel free, however, to use any styling you want. */
+.noUi_midBar			{
+	
+	background-image:		-webkit-linear-gradient(90deg, #555555 20% , #777777 100% );
+}
+.sp-player a {
+	cursor: default !important;
+	-webkit-user-drag: none;
+}
+footer a{	
+color: #EEEEEE;
+}
+/* The look of the slider knobs. They are best positioned absolutely. */
+.noUi_sliderKnob		{
+	 -webkit-appearance: none !important;
+    border-radius: 128px;
+	margin-top:5px;
+    background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(161,161,161)),
+		color-stop(0.58, rgb(232,232,232))
+	);
+	box-shadow: 0px 1px 2px #111111;
+    height:8px;
+    width:8px;
+}
+.fade {
+	background-image: url("../img/fade.png");
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	
+}
+/* The knobs can look different when hovered or being moved. 
+.noUi_sliderKnob:hover,
+.noUi_activeHandle		{
+	background:			#adcbe1;
+	border-color:			#2673AB;
+}*/
+.sp-item {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.input-dark {
+	background-image: -webkit-linear-gradient(90deg, #333333, #00000);
+	border: 1px solid #000000;
+	padding: 15px;
+}
+#play-me {
+	width:100%;
+	height:100%;
+}
+.sp-track-field-year {
+	color:#777777 !important;
+}
+.cbox{
+	border: 1px solid #222222;
+	background: url("../img/lightbg.png");
+/*	background-color: #282828;
+	border-right: 1px solid #444444;
+	border-bottom: 1px solid #444444;
+	border-left: 1px solid #111111;
+	border-top: 1px solid #111111;
+	border-radius:8px;*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding:20px;
+}
+a {
+color: #EEEEEE;
+}
+body {
+background: #373737;/* url("../img/background.png");*/
+
+min-height: 100%;
+}
+
+#story {
+	background: url("../img/lightbg.png") /* -webkit-linear-gradient(90deg, #555555, #777777)*/;
+	box-shadow: 0px 1px 2px #333333;
+}
+#flow {
+}
+#story, #albums, #flow, footer,  #fb-connect{
+	margin-left:33px;
+	margin-right:33px;
+	
+/*	box-shadow: 0px 5px 5px #222222, inset 1px 1px 2px #444444 ;*/
+	border-radius:5px;
+}
+
+footer {
+
+}
+
+
+divider h2 {
+	top: 0px;
+	height: 30px;
+	position: relative;
+	background-image: -webkit-linear-gradient(#5B5B5B,
+		#4B4B4B);
+	border-bottom: 1px solid #292929;
+	border-top: 1px solid #686868;
+	color: #D7D7D7;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 14px;
+	padding: 3px 15px 4px;
+	text-shadow: 0 -1px 0 #404040;
+	height: 16px;
+
+}
+
+.toolbar {
+	height: 32px !important;
+	padding: 0px;
+	/*-webkit-border-image: url("sp://import/img/view-toolbar-bg.png") 5 5 5 5;*/
+	-webkit-border-image: url("sp://timemachine/img/toolbar.png") 5 5 5 5;
+	border-width: 5px;
+	background-color:#222222;
+}

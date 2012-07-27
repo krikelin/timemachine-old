@@ -1,0 +1,96 @@
+body {
+
+	text-shadow: 0px 1px 1px #000000;
+	color: #FFFFFF;
+	font-family: "Tahoma";
+	font-size: 11px;
+}
+header {
+	height: 94px;
+		top: 12px;
+		position: relative;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	
+}
+hr {
+	border: none;
+	
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #333333	;
+}
+footer {
+	bottom:0px;
+	height:32px;
+	position: fixed;
+	left:0px;
+	width: 100%;
+}
+.mark {
+	color:@primary;
+}
+header h1  sketch{
+	color: white;
+	font-family: "Sketch Block Bold";
+	font-size:50px;
+}
+nav ul {
+	list-style-type: none;
+} 
+nav {
+	position: fixed;
+	left:10px;
+	top:170px;
+}
+a {
+	text-decoration: none;
+}
+nav li a {
+	color:#444444;
+}
+nav li {
+	
+	padding:5px;
+	border-radius: 12px;
+}
+nav li[selected="true"] {
+	background-color: @primary;
+}
+nav li:hover {
+	background-color: #eeeeee;
+}
+h1 {
+	font-family: "Arial";
+	color: @primary;
+}
+input, button {
+	padding:5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+section {
+	width: 100%;
+	position: absolute;
+	left: 20px;
+	top:50px;
+}
+#container {
+	left:20%;
+	top:120px;
+	width:60%;
+	position: absolute;
+	
+}
+a {
+	color: @primary;
+}
+
+nav {
+
+
+}
+footer {
+	bottom:0px;
+	height:24px;
+}

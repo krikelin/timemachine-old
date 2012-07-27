@@ -1,0 +1,55 @@
+.sp-header {
+	background: -webkit-linear-gradient(-90deg, rgb(168, 168, 168), rgb( 134, 134, 134));
+	color:#333333 !important;
+	
+}
+.sp-column, .sp-header {
+	-webkit-user-drag: none;
+}
+
+/*
+.sp-column:active {
+	background-image: url("../img/tabheader_press.png");
+}*/
+
+.sp-column {	
+	height:19px;
+	position: relative;
+	/*background-image: url("../img/tabheader.png");*/
+	font-family: "Tahoma";
+	font-weight: bold;
+	color:#000000;
+	text-shadow:0px 1px 0px #cccccc;
+	
+	box-shadow:inset -1px 0px 0px rgb(107, 107, 107), inset 1px 0px 0px rgb(171, 171, 171), inset 0px 1px 0px rgb(201, 201, 201);
+	border-bottom: 1px solid rgb(61, 61, 61);
+	
+	display: table;
+
+	table-layout: fixed;
+}
+.sp-column:last-child {
+	box-shadow: inset 0px 1px 0px rgb(201, 201, 201);
+}
+.sp-list {
+	overflow: visible;
+	
+}
+.sp-track-field-cover {
+	width:16px;
+}
+.sp-track-field-name {
+	width:223px;
+}.sp-track-field-artist {
+	width:115px;
+}
+.sp-track-field-cover{
+	width:20px;
+	height:20px;
+}
+.sp-track-field-album {
+	width:287px;
+}
+.sp-track-field-popularity {
+	width:55px;
+}
